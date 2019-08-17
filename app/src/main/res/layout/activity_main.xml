@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.valueplus.androideventdispatch.SimpleLayout
+        android:id="@+id/simpleLayout"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#DF3A82"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.066">
+
+        <com.valueplus.androideventdispatch.SimpleView
+            android:id="@+id/simpleView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="#5177A2" />
+    </com.valueplus.androideventdispatch.SimpleLayout>
+
+    <Switch
+        android:id="@+id/swActvTouch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:text="Activity onTouch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <Switch
+        android:id="@+id/swLaytTouch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Layout onTouch"
+        app:layout_constraintEnd_toEndOf="@+id/swActvTouch"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/swActvTouch"
+        app:layout_constraintTop_toBottomOf="@+id/swActvTouch" />
+
+    <Switch
+        android:id="@+id/swViewTouch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="View onTouch"
+        app:layout_constraintEnd_toEndOf="@+id/swLaytTouch"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/swLaytTouch"
+        app:layout_constraintTop_toBottomOf="@+id/swLaytTouch" />
+
+    <Switch
+        android:id="@+id/swLaytIntercept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Layout onIntercept"
+        app:layout_constraintEnd_toEndOf="@+id/swViewTouch"
+        app:layout_constraintHorizontal_bias="0.392"
+        app:layout_constraintStart_toStartOf="@+id/swViewTouch"
+        app:layout_constraintTop_toBottomOf="@+id/swViewTouch" />
+
+    <Switch
+        android:id="@+id/swActvDispatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activity dispatch"
+        app:layout_constraintBaseline_toBaselineOf="@+id/swActvTouch"
+        app:layout_constraintEnd_toEndOf="@+id/swLaytDispatch"
+        app:layout_constraintStart_toStartOf="@+id/swLaytDispatch" />
+
+    <Switch
+        android:id="@+id/swLaytDispatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Layout dispatch"
+        app:layout_constraintBaseline_toBaselineOf="@+id/swLaytTouch"
+        app:layout_constraintEnd_toEndOf="@+id/swViewDispatch"
+        app:layout_constraintStart_toStartOf="@+id/swViewDispatch" />
+
+    <Switch
+        android:id="@+id/swViewDispatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:text="View dispatch"
+        app:layout_constraintBaseline_toBaselineOf="@+id/swViewTouch"
+        app:layout_constraintStart_toEndOf="@+id/swViewTouch" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        android:text="checked for return true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/simpleLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
